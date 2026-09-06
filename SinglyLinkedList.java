@@ -92,9 +92,7 @@ public class SinglyLinkedList<E> {
         E lastE = tail.getElement();
 
         if (head == tail) {
-            head = null;
-            tail = null;
-            return lastE;
+            return removeFirst();
         }
 
         Node<E> newLast = head;
@@ -106,6 +104,7 @@ public class SinglyLinkedList<E> {
         
         tail = newLast;
         tail.setNext(null);
+        size --;
         return lastE;
 
     }
