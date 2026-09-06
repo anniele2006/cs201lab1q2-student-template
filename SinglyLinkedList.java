@@ -89,12 +89,23 @@ public class SinglyLinkedList<E> {
             return null;
         }
 
+        E lastE = tail.getElement();
+
+        if (head == tail) {
+            head = null;
+            tail = null;
+            return lastE;
+        }
+
         Node<E> newLast = head;
+
         while (newLast.getNext() != tail) {
             newLast = newLast.getNext();
         }
-        E lastE = tail.getElement();
+
+        
         tail = newLast;
+        tail.setNext(null);
         return lastE;
 
     }
