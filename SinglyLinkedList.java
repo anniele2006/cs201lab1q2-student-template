@@ -123,6 +123,6 @@ public class SinglyLinkedList<E> {
         }
 
         head = prev;
-        //dummy push
+        //dummy pushksjdfkasjdf
     }
 }
